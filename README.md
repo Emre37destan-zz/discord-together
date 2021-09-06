@@ -41,7 +41,7 @@ const { DiscordTogether } = require('discord-together');
 client.discordTogether = new DiscordTogether(client);
 
 client.on('messageCreate', async message => { // 'message' for Discord.js v12
-    if (message.content === 'başla') {
+    if (message.content === 'start') {
         if(message.member.voice.channel) {
             client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'poker').then(async invite => {
                 return message.channel.send(`${invite.code}`);
@@ -111,7 +111,7 @@ client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'appl
 <br/>
 
 # 🌌 Discord Together ile yapılan bot örnekleri
-- [Discord Birlikte Bot](https://github.com/RemyK888/discord-together-bot) by [Emre37destan](https://github.com/Emre37destan)
+- [Discord Birlikte Bot](https://github.com/RemyK888/discord-together-bot) by [RemyK](https://github.com/Emre37destan)
 - [Lambdapse](https://github.com/lambdagit101/lambdapse) by [Lambdaguy101](https://github.com/lambdagit101)
 
 # 🚀 Diğerleri
